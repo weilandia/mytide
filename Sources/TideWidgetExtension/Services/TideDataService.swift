@@ -71,8 +71,8 @@ class TideDataService {
         let response = try JSONDecoder().decode(NOAAResponse.self, from: data)
         
         // Debug: Print first few predictions
-        for (index, pred) in response.predictions.prefix(5).enumerated() {
-            let parsed = parseTideDate(pred.t)
+        for (_, pred) in response.predictions.prefix(5).enumerated() {
+            let _ = parseTideDate(pred.t)
             let localFormatter = DateFormatter()
             localFormatter.dateFormat = "MMM d, h:mm a zzz"
             localFormatter.timeZone = TimeZone(identifier: AppConfig.timezone)
@@ -243,7 +243,7 @@ class TideDataService {
         let localFormatter = DateFormatter()
         localFormatter.dateFormat = "MMM d, h:mm a zzz"
         localFormatter.timeZone = TimeZone(identifier: AppConfig.timezone)
-        for (index, tide) in nextTides.enumerated() {
+        for (_, _) in nextTides.enumerated() {
         }
         
         // Process hourly predictions for chart

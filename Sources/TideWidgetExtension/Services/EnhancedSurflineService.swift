@@ -28,8 +28,9 @@ class EnhancedSurflineService: ObservableObject {
                 }
             }
             
+            let finalResults = results
             await MainActor.run {
-                self.spotConditions = results
+                self.spotConditions = finalResults
                 self.isLoading = false
             }
         }

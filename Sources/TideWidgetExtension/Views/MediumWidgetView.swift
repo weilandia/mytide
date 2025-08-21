@@ -100,7 +100,7 @@ struct MediumWidgetView: View {
                                             .lineLimit(1)
                                         Spacer()
                                         HStack(spacing: 2) {
-                                            ForEach(0..<Int(conditions.rating.value)) { _ in
+                                            ForEach(0..<Int(conditions.rating.value), id: \.self) { _ in
                                                 Image(systemName: "star.fill")
                                                     .font(.system(size: 8))
                                                     .foregroundColor(.yellow)

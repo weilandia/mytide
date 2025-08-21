@@ -4,9 +4,9 @@
 
 ## The DIY AI Era
 
-We're living in an incredible moment where AI can help us build exactly what we want. This project represents that ethos perfectly - it's a custom macOS widget I wanted for checking Santa Cruz tide and surf conditions, built with AI assistance in a single afternoon.
+We're living in an incredible moment where AI can help us build exactly what we want. This project represents that ethos perfectly - it's a custom macOS widget I wanted for checking tides and surf conditions, built with AI assistance passively in a few hours.
 
-**This isn't meant to be a general-purpose app.** It's specifically configured for my favorite surf spots in Santa Cruz. But that's the beauty of the DIY AI era - you can fork this and make it yours in minutes.
+**This isn't meant to be a general-purpose app.** It's specifically configured for my surf spots in Santa Cruz. But that's the beauty of the DIY AI era - you can fork this and make it yours in minutes.
 
 ## What It Does
 
@@ -38,7 +38,7 @@ We're living in an incredible moment where AI can help us build exactly what we 
    ```
 
 2. **Configure Your Spots**
-   
+
    Edit `Sources/TideWidgetExtension/Configuration/AppConfig.swift`:
    ```swift
    static let surflineSpots = [
@@ -49,7 +49,7 @@ We're living in an incredible moment where AI can help us build exactly what we 
        )
    ]
    ```
-   
+
    To find your spot ID:
    - Go to surfline.com
    - Navigate to your spot
@@ -129,7 +129,7 @@ This project embodies the DIY spirit of our AI-assisted era:
 1. **Built for one person**: Me. It does exactly what I need.
 2. **Easily forkable**: You can make it yours in minutes.
 3. **AI-assisted**: Built with Claude in a few hours.
-4. **No bloat**: No analytics, no accounts, no BS.
+4. **No bloat**: No analytics, no accounts.
 5. **Local first**: Your data stays on your machine.
 
 ## Contributing

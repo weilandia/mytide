@@ -31,8 +31,9 @@ class SurflineService: ObservableObject {
                 }
             }
             
+            let finalResults = results
             await MainActor.run {
-                self.spotData = results
+                self.spotData = finalResults
                 self.isLoading = false
             }
         }

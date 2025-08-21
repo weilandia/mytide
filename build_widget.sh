@@ -1,22 +1,23 @@
 #!/bin/bash
 
-echo "Building Santa Cruz Tide Widget for macOS..."
+echo "Building mytides Widget for macOS..."
 
 # Clean previous builds
 rm -rf .build
 rm -rf ~/Library/Widgets/SantaCruzTides.widgetExtension
+rm -rf ~/Library/Widgets/mytides.widgetextension
 
 # Build the widget
 swift build -c release --product TideWidget
 
 # Create widget bundle structure
-WIDGET_DIR="SantaCruzTides.widgetExtension"
+WIDGET_DIR="mytides.widgetextension"
 rm -rf "$WIDGET_DIR"
 mkdir -p "$WIDGET_DIR/Contents/MacOS"
 mkdir -p "$WIDGET_DIR/Contents/Resources"
 
 # Copy the executable
-cp .build/release/TideWidget "$WIDGET_DIR/Contents/MacOS/SantaCruzTides"
+cp .build/release/TideWidget "$WIDGET_DIR/Contents/MacOS/mytides"
 
 # Create Info.plist for the widget extension
 cat > "$WIDGET_DIR/Contents/Info.plist" << EOF
@@ -25,11 +26,11 @@ cat > "$WIDGET_DIR/Contents/Info.plist" << EOF
 <plist version="1.0">
 <dict>
     <key>CFBundleIdentifier</key>
-    <string>com.santacruztides.widget</string>
+    <string>com.mytides.widget</string>
     <key>CFBundleName</key>
-    <string>Santa Cruz Tides</string>
+    <string>mytides</string>
     <key>CFBundleDisplayName</key>
-    <string>Santa Cruz Tides</string>
+    <string>mytides</string>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>CFBundleShortVersionString</key>
@@ -44,7 +45,7 @@ cat > "$WIDGET_DIR/Contents/Info.plist" << EOF
         <string>TideWidget</string>
     </dict>
     <key>CFBundleExecutable</key>
-    <string>SantaCruzTides</string>
+    <string>mytides</string>
     <key>LSMinimumSystemVersion</key>
     <string>14.0</string>
 </dict>
@@ -61,7 +62,7 @@ echo ""
 echo "To add the widget to your desktop:"
 echo "1. Right-click on your desktop"
 echo "2. Select 'Edit Widgets'"
-echo "3. Search for 'Santa Cruz Tides'"
+echo "3. Search for 'mytides'"
 echo "4. Click the '+' button to add it"
 echo "5. Choose your preferred size (Small, Medium, or Large)"
 echo ""

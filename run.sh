@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Building Santa Cruz Tide Widget..."
+echo "Building mytides Widget..."
 swift build
 
 if [ $? -eq 0 ]; then
